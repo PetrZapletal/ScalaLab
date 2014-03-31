@@ -59,11 +59,11 @@ object BestBetCalc {
       if (!teams.contains(record.awayTeam)) teams += record.awayTeam -> 0.0
 
       if (record.FTHG > record.FTAG) {
-        teams(record.homeTeam) += BET * record.B365H
+        teams(record.homeTeam) += BET * record.B365H - BET
         teams(record.awayTeam) -= BET
       } else if (record.FTHG < record.FTAG) {
         teams(record.homeTeam) -= BET
-        teams(record.awayTeam) += BET * record.B365A
+        teams(record.awayTeam) += BET * record.B365A - BET
       } else if (record.FTHG == record.FTAG) {
         teams(record.homeTeam) -= BET
         teams(record.awayTeam) -= BET
