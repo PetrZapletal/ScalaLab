@@ -2,12 +2,33 @@ name := "ScalaLab"
 
 version := "1.0"
 
-organization := "com.zapletal"
+scalaVersion := Version.scala
 
-scalaVersion := "2.10.4"
+libraryDependencies ++= Dependencies.ScalaLab
 
-resolvers ++= Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
-	"snapshots-repo" at "http://scala-tools.org/repo-snapshots")
+scalacOptions ++= List(
+  "-unchecked",
+  "-deprecation",
+  "-language:_",
+  "-target:jvm-1.7",
+  "-encoding", "UTF-8"
+)
 
-libraryDependencies += "org.scala-lang.modules" % "scala-async_2.10" % "0.9.0"
+//resolvers ++= Seq("Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
+//	"snapshots-repo" at "http://scala-tools.org/repo-snapshots")
+
+//initialCommands in console := "import scalaz._, Scalaz._"
+
+//initialCommands in console in Test := "import scalaz._, Scalaz._,scalacheck.ScalazProperties._,scalacheck.ScalazArbitrary._,scalacheck.ScalaCheckBinding._"
+
+
+
+
+
+
+
+
+
+
+
 
